@@ -18,7 +18,7 @@ class Teams(Group):
     status = models.CharField(choices=CHOICE, max_length=24)
     avatar = models.ImageField(upload_to='teams_avatars/', null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
-    invite_code = models.IntegerField(max_length=6)
+    invite_code = models.IntegerField()
 
     def __str__(self):
         return self.name

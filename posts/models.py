@@ -24,10 +24,6 @@ class Questions(models.Model):
         return self.title
 
 
-ANSWER_CHOICE = [
-
-]
-
 class Answers(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_answer')
     question = models.ForeignKey(Questions, on_delete=models.CASCADE)
